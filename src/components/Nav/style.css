@@ -1,0 +1,9 @@
+.navbar {
+    position: relative;
+    width: 300px;
+    min-width:300px;     
+    height: calc(100vh - 80px);
+    left: 0px;
+    top: 0px;
+    background: #B4B4B4;
+}

@@ -1,0 +1,74 @@
+[
+    {
+        "name":"Bruna",
+        "id": "12345",
+        "email":"brn.flor@butia.pt",
+        "password":"12345",
+        "pets":[
+            {
+                "name":"Nala",
+                "id":"54321",
+                "birthDate":"12-05-2012",
+                "breed":"Chow Bull",
+                "weight": 25,
+                "weightUnit":"kg",
+                "imgUrl":"./",
+                "maleOrFemale":"Female",
+                "description":"A melhor cachorra do mundo",
+                "haveMedicines": {},
+                "haveVaccines":{}
+            },
+            {
+                "name":"Kiara",
+                "id":"54322",
+                "birthDate":"20-09-2021",
+                "breed":"Labradora",
+                "weight": 15,
+                "weightUnit":"kg",
+                "imgUrl":"./",
+                "maleOrFemale":"Female",
+                "description":"Ainda não sei, mas já amo",
+                "haveMedicines": {},
+                "haveVaccines":{}
+            }
+        ]
+
+
+    },
+    {
+        "name":"Brunas",
+        "id": "12346",
+        "email":"brn.flor@butia.pt",
+        "password":"12345",
+        "pets":[
+            {
+                "name":"Nalas",
+                "id":"54321",
+                "birthDate":"12-05-2012",
+                "breed":"Chow Bull",
+                "weight": 25,
+                "weightUnit":"kg",
+                "imgUrl":"./",
+                "maleOrFemale":"Female",
+                "description":"A melhor cachorra do mundo",
+                "haveMedicines": {},
+                "haveVaccines":{}
+            },
+            {
+                "name":"Kiaras",
+                "id":"54322",
+                "birthDate":"20-09-2021",
+                "breed":"Labradora",
+                "weight": 15,
+                "weightUnit":"kg",
+                "imgUrl":"./",
+                "maleOrFemale":"Female",
+                "description":"Ainda não sei, mas já amo",
+                "haveMedicines": {},
+                "haveVaccines":{}
+            }
+        ]
+
+
+    }
+]
