@@ -1,13 +1,12 @@
 import "./style.css"
+import { Link } from "react-router-dom"
 
 const Menu = () => {
  return (
      <div className="menu">
-         <p>Home</p>
-         <p>Link 1</p>
-         <p>Link 2</p>
-         <p>Link 3</p>
-         <p>Link 4</p>
+         <p>{<Link to="/">Home</Link>}</p>
+         <p>{<Link to="/dashboard">Dashboard</Link>}</p>
+         <p>{<Link to="/category">Category</Link>}</p>
      </div>
 
  )

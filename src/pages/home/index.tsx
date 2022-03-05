@@ -5,13 +5,9 @@ import "./style.css"
 
 const Home = () => {
     return (
-        <div>
-            <Menu></Menu>
-            <div className="main">
-                <Nav></Nav>
+        
                 <Dashboard></Dashboard>
-            </div>
-        </div>
+            
     )
 
 }
