@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { Menu } from './components/menu'
 import { Nav } from './components/Nav'
 import { Category } from './pages/Category'
-// import './App.css'
+import './App.css'
 import { Home } from './pages/home'
 import { AppRoute} from './pages/routes'
 

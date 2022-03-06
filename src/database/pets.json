@@ -15,7 +15,21 @@
                 "imgUrl":"./",
                 "maleOrFemale":"Female",
                 "description":"A melhor cachorra do mundo",
-                "haveMedicines": {},
+                "haveMedicines":[
+                    {
+                        "medicineName":"Vermivet",
+                        "id":"99859",
+                        "typeOfMedicine":"Vermifugo",
+                        "applicationDate": "12-02-2021"
+                    },
+                    {
+                        "medicineName":"Estriquinina",
+                        "id":"159952",
+                        "typeOfMedicine":"Vermifugo",
+                        "applicationDate": "12-02-2021"
+                    }
+
+                ], 
                 "haveVaccines":{}
             },
             {
@@ -28,21 +42,35 @@
                 "imgUrl":"./",
                 "maleOrFemale":"Female",
                 "description":"Ainda não sei, mas já amo",
-                "haveMedicines": {},
-                "haveVaccines":{}
+                "haveMedicines": [
+                    {
+                        "medicineName":"Vermivet",
+                        "id":"99859",
+                        "typeOfMedicine":"Vermifugo",
+                        "applicationDate": "12-02-2021"
+                    },
+                    {
+                        "medicineName":"Estriquinina",
+                        "id":"159952",
+                        "typeOfMedicine":"Vermifugo",
+                        "applicationDate": "12-02-2021"
+                    }
+
+                ], 
+                                "haveVaccines":{}
             }
         ]
 
 
     },
     {
-        "name":"Brunas",
+        "name":"Wes",
         "id": "12346",
         "email":"brn.flor@butia.pt",
         "password":"12345",
         "pets":[
             {
-                "name":"Nalas",
+                "name":"Pepa",
                 "id":"54321",
                 "birthDate":"12-05-2012",
                 "breed":"Chow Bull",
@@ -51,11 +79,25 @@
                 "imgUrl":"./",
                 "maleOrFemale":"Female",
                 "description":"A melhor cachorra do mundo",
-                "haveMedicines": {},
+                "haveMedicines": [
+                    {
+                        "medicineName":"Vermivet",
+                        "id":"99859",
+                        "typeOfMedicine":"Vermifugo",
+                        "applicationDate": "12-02-2021"
+                    },
+                    {
+                        "medicineName":"Estriquinina",
+                        "id":"159952",
+                        "typeOfMedicine":"Vermifugo",
+                        "applicationDate": "12-02-2021"
+                    }
+
+                ], 
                 "haveVaccines":{}
             },
             {
-                "name":"Kiaras",
+                "name":"Kovu",
                 "id":"54322",
                 "birthDate":"20-09-2021",
                 "breed":"Labradora",
@@ -64,7 +106,21 @@
                 "imgUrl":"./",
                 "maleOrFemale":"Female",
                 "description":"Ainda não sei, mas já amo",
-                "haveMedicines": {},
+                "haveMedicines": [
+                    {
+                        "medicineName":"Vermivet",
+                        "id":"99859",
+                        "typeOfMedicine":"Vermifugo",
+                        "applicationDate": "12-02-2021"
+                    },
+                    {
+                        "medicineName":"Estriquinina",
+                        "id":"159952",
+                        "typeOfMedicine":"Vermifugo",
+                        "applicationDate": "12-02-2021"
+                    }
+
+                ], 
                 "haveVaccines":{}
             }
         ]
