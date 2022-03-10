@@ -14,13 +14,12 @@ import { Users } from "./Users"
  function AppRoute () {
     return (
         <Routes>
-            {/* <Route path="/"  element={<Home></Home>}></Route> */}
-            <Route path="/"  element={<Users></Users>}></Route>
-            {/* <Route path="/petdashboard" element={<PetDashboard></PetDashboard>}></Route> */}
+            <Route path="/"  element={<Users />}></Route>
+           
             {/* /:user_id is a variable we create to be used as a params */}
             <Route path="/:user_id" element={<Dashboard />}></Route>
             <Route path="/:user_id/:pet_id" element={<PetDashboard />}></Route>
-            <Route path="/category" element={<Category></Category>}></Route>
+            <Route path="/category" element={<Category />}></Route>
 
      
         </Routes>

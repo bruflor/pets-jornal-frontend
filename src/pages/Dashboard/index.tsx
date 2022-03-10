@@ -18,7 +18,7 @@ const Dashboard = () => {
 
         <div className="dashboard">
 
-            <h1>Dashboard</h1>
+            <h1>{myUser.name} Dashboard</h1>
 
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet iusto maiores, dolor iste doloribus ad dolore. Modi quo, commodi hic quibusdam dolorem libero dolores quod ducimus cupiditate, excepturi aut dolor!</p>
 

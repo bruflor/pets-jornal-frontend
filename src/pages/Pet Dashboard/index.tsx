@@ -7,10 +7,11 @@ import myDataBase from "../../database/pets.json"
 const PetDashboard = () => {
 
     const { user_id, pet_id } = useParams()
-   //
+    //Find a user position
     const userIndex = myDataBase.findIndex(user => user.id === user_id)
     const userData = myDataBase[userIndex]
-   
+    
+    //Find a pet for the user position already found at userIndex
     const myUserPetIndex = userData.pets.findIndex(pet => pet.id === pet_id)
     const myPetData = userData.pets[myUserPetIndex]
 
