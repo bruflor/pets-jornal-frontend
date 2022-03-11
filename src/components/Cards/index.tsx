@@ -6,7 +6,7 @@ interface IPets {
     description?: string;
     weight?: number | string
     dateOfBirth?: string;
-    petId: string | number;
+    petId?: string | number;
     userId?: string
 }
 
