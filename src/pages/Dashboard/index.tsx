@@ -1,53 +1,52 @@
 import axios from 'axios'
 import { Cards } from "../../components/Cards"
-// import { NewCard } from "../../components/Cards/newCard"
+import { NewData } from '../../components/PetDataCards/newData'
 import { useParams } from "react-router-dom"
 import "./style.css"
-// import myDataBase from "../../database/pets.json"
+import { useState } from 'react';
+import React from 'react';
+import API from "../../api"
 
-const petsDoAxios = axios.get('https://servicodados.ibge.gov.br/api/v1/localidades/estados/33/distritos').then(function(response){
-    console.log(response.data)
-})
-
+interface IPets {
+    name: string;
+    description?: string;
+    weight?: number | string
+    dateOfBirth?: string;
+    id: string;
+    userId?: string
+}
 
 const Dashboard = () => {
 
-    //user_id is coming from useParams
-    const {user_id} = useParams()
-    
-    // const userIndex = myDataBase.findIndex(user => user.id === user_id)
+    const [pets, setPets] = useState<IPets[]>([]) //between <> is the type, that's a Array from my interface. Between the () is a initial value, that's a empty array
 
-    // const myUser = myDataBase[userIndex]
-
+    React.useEffect(() => {
+        API.get("/pets/").then((response) => {
+                const axioPets = response.data;
+                setPets(axioPets);
+            })
+        }, [])
+        
+        
     return (
 
         <div className="dashboard">
-
-            {/* <h1>{myUser.name} Dashboard</h1> */}
-
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet iusto maiores, dolor iste doloribus ad dolore. Modi quo, commodi hic quibusdam dolorem libero dolores quod ducimus cupiditate, excepturi aut dolor!</p>
-
             <div>
 
                 <h2>My Pets</h2>
-
                 <div className="cardsLine">
-
-                    {/* {myUser.pets.map(pet =>
-
-                        <Cards userId={user_id}name={pet.name} weight={pet.weight} key={pet.id} petId={pet.id}></Cards>
-
-                    )} */}
-
-                    {/* <NewCard /> */}
-
+                    {pets.map(pet => {
+                        return (
+                            <Cards name={pet.name} id={pet.id} key={pet.id} />
+                        )
+                    })}
+                    <NewData />
                 </div>
-
             </div>
-
         </div>
 
-    )
+)
 
 }
 

@@ -6,18 +6,18 @@ interface IPets {
     description?: string;
     weight?: number | string
     dateOfBirth?: string;
-    petId: string | number;
+    id: string;
     userId?: string
 }
 
-const Cards = ({ name, description, weight, petId, dateOfBirth,userId }: IPets) => {
+const Cards = ({ name, description, weight, id, dateOfBirth,userId }: IPets) => {
     return (
         // <div id={petId} className={myClass === undefined ? `cards` : `cards  ${myClass}`}>
         // <div id={petId} className="cards">
         <div className="cards" >
             
             <img></img>
-            <h3>{<Link to={`/${userId}/${petId}`}>{name}</Link>} </h3>
+            <h3>{<Link to={id}>{name}</Link>} </h3>
             <p>{description} </p>
             <p>{weight}</p>
             <ul className="buttonsCard">

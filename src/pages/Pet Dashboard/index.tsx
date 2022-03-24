@@ -1,45 +1,37 @@
-import { PetDataCard } from "../../components/PetDataCards"
+// import { PetDataCard } from "../../components/PetDataCards"
 import "./style.css"
 import { useParams } from "react-router-dom"
-import myDataBase from "../../database/pets.json"
+import React, { useState } from "react"
+import API from "../../api"
 
+interface IPet {
+    name: string;
+    description?: string;
+    weight?: number | string
+    dateOfBirth?: string;
+    id: string;
+    userId?: string
+}
 
 const PetDashboard = () => {
+    const {pet_id} = useParams()
+    const [pet, setPet] = useState<IPet>()
 
-    const { user_id, pet_id } = useParams()
-    //Find a user position
-    const userIndex = myDataBase.findIndex(user => user.id === user_id)
-    const userData = myDataBase[userIndex]
-    
-    //Find a pet for the user position already found at userIndex
-    const myUserPetIndex = userData.pets.findIndex(pet => pet.id === pet_id)
-    const myPetData = userData.pets[myUserPetIndex]
 
+    React.useEffect(() => {
+        API.get(`/pets/${pet_id}`).then((response) => {
+                const axioPets = response.data;
+
+            setPet(response.data);
+            })
+        }, [])
+        
     return (
-        console.log(myPetData),
-        <div className="dashboard">
 
-            <h1>{myPetData.name} Dashboard</h1>
-
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet iusto maiores, dolor iste doloribus ad dolore. Modi quo, commodi hic quibusdam dolorem libero dolores quod ducimus cupiditate, excepturi aut dolor!</p>
-
-            <div>
-
-                <h2>Medicine</h2>
-
-                <div className="cardsLine">
-
-                    {myPetData.haveMedicines.map(medicine =>
-
-                        <PetDataCard medicineName={medicine.medicineName} typeOfMedicine={medicine.typeOfMedicine} key={medicine.id} petId={medicine.id}></PetDataCard>
-
-                    )}
-
-                </div>
-
-            </div>
-
+        <div>
+            <p>{pet?.name}</p>
         </div>
+
 
     )
 

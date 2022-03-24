@@ -18,3 +18,20 @@
     position: relative;
     justify-content: space-evenly;
 }
+
+.plus {
+    /* background: #eeeeee; */
+    font-size: 100px;
+    border-radius: 100%;
+    border: 1px solid #999999;
+    width: 50%;
+    height: 50%;
+    text-align: center;
+    
+}
+
+
+:link {
+        text-decoration: none;
+        
+}

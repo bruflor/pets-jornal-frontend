@@ -12,23 +12,21 @@ const Users = () => {
 
         <div className="dashboard">
 
-            <h1>Usuários</h1>
+            <h1>Login</h1>
 
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet iusto maiores, dolor iste doloribus ad dolore. Modi quo, commodi hic quibusdam dolorem libero dolores quod ducimus cupiditate, excepturi aut dolor!</p>
+          <div>
 
-            <div>
-
-                <h2>Users</h2>
 
                 <div className="cardsLine">
+                    <Link to="64de88d0-9b52-41c9-bfec-997170bc9ac7">Logado</Link>
 
-                    {users.map(user =>
+                    {/* {users.map(user =>
                         <p>
                             <Link to={user.id}>{user.name}</Link>
                         </p>
                         
 
-                    )}
+                    )} */}
 
                     {/* <NewCard /> */}
 
