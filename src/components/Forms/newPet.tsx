@@ -5,7 +5,7 @@ import { Input } from "./input";
 import "./style.css";
 import axios from "axios";
 import { useNavigate } from "react-router";
-// import API from "../../api";
+import API from "../../api";
 
 interface IForm {
   id: string;
@@ -27,23 +27,22 @@ interface IForm {
 const NewPet = ({ name, birthDate, ...rest }: IForm) => {
   const navigate = useNavigate();
   const formRef = useRef<FormHandles>(null);
+  const [petData, setPetData] = useState<IForm>();
   const handleSubmit: SubmitHandler<FormData> = (data) => {
     const owner = { owner: "wes@wes.com" };
-    axios({
-      method: "post",
-      url: "http://localhost:8000/pets/",
-      data: { ...data, ...owner },
-    });
-    // () => {
-    //   try {
-    //     const resp = axios.post("/pets/", { ...data, ...owner });
-    //     console.log("sim");
-    //   } catch (err) {
-    //     console.log("mnao");
-    //     console.error(err);
-    //   }
-    // };
+    const dataObject = { ...data, ...owner };
+    setPetData(dataObject);
   };
+
+  useEffect(() => {
+    if (petData !== undefined) {
+      API.post("/pets/", petData).then((response) => {
+        navigate("/pets/");
+      });
+    } else {
+      return;
+    }
+  }, [petData]);
 
   return (
     <div>
