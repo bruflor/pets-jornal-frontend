@@ -19,10 +19,11 @@ const Input = ({ name, label, type = "text" }: Props) => {
     });
   }, [fieldName, registerField]);
   return (
-    <div>
-      <label for={name}>{label}</label>
+    <p>
+      <label>{label}</label>
+      <br />
       <input ref={inputRef} id={name} type={type} />
-    </div>
+    </p>
   );
 };
 
