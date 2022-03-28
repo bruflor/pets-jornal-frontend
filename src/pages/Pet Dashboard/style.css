@@ -1,7 +1,22 @@
-
 .dashboard {
-    margin: 0 32px;
-    width: 100%;
-    overflow: hidden;
-    position: relative;
+  margin: 0 32px;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.dashboardCards {
+  position: relative;
+  overflow: hidden;
+}
+
+ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: flex-start;
+}
+
+li {
+  padding-right: 16px;
+  background: #eee;
 }
