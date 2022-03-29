@@ -5,28 +5,8 @@ import React, { useState } from "react";
 import API from "../../api";
 import { PetDataCard } from "../../components/PetDataCards";
 import { Category } from "../Category";
+import dataCategory from "../../database/categories.json";
 
-const dataCategory = [
-  {
-    category: {
-      categoryType: "Medicines",
-      name: "Vermivet",
-      type: "Vermifuge",
-      laboratory: "Bauer",
-      frequency: "2 doses 6 months apart",
-    },
-  },
-  {
-    category: {
-      categoryType: "Vaccines",
-
-      name: "V12",
-      type: "Polyvalent",
-      laboratory: "Bauer",
-      frequency: "Yearly",
-    },
-  },
-];
 interface IPet {
   id: string;
   name: string;
@@ -42,6 +22,21 @@ interface IPet {
   created_at: string;
   owner?: string;
   label?: string;
+}
+
+interface IDataCategory {
+  typeOfMedicineObj: string;
+}
+
+interface IMedicinesGroup {
+  type: string;
+  allMedicines: IMedicine[];
+}
+interface IMedicine {
+  name: string;
+  typeOfMediccine: string;
+  laboratory: string;
+  frequency: string;
 }
 
 const PetDashboard = () => {
@@ -71,16 +66,12 @@ const PetDashboard = () => {
       </div>
       <div className="dashboardCards">
         {dataCategory.map((categories) => {
-          const petCategory = categories.category;
+          console.log(categories.type);
+          //TODO If type === medicine will map the array of allMedicines and return the medicine name
+          console.log(categories.allMedicines[0].name);
           return (
             <div>
-              <h2>{petCategory.categoryType}</h2>
-              {/* {petCategory.map(tOfCategory =>
-                <PetDataCard
-                  categoryType={tOfCategory.name}
-                  name={tOfCategory.name}
-                />
-              )} */}
+              <PetDataCard categoryType={categories.type} />
             </div>
           );
         })}

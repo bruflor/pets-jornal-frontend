@@ -1,0 +1,24 @@
+[
+    {
+        "type":"Medicines",
+        "allMedicines": [
+            {
+                "name": "Vermivet",
+                "typeOfMedicine": "Vermifuge",
+                "laboratory": "Bauer",
+                "frequency": "2 doses 6 months apart"
+            },
+            { 
+                "name": "Vitamina",
+                "typeOfMedicine": "Vitamine",
+                "laboratory": "Bauer",
+                "frequency": "Yearly"
+            }
+    ]},
+
+    {
+        "type":"Vaccines", 
+        "allMedicines": [{"name":"banana"}]
+    
+    }
+]
