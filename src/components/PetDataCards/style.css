@@ -1,20 +1,32 @@
-.cards{
-    width: 560px;
-    height: 208px;
-    left: 386px;
-    top: 520px;
-    padding: 16px;
-    border: 2px solid #c4c4c4;
-    border-radius: 8px;
-    background: #fff;
-    /* padding: 8px; */
-    margin: 8px;
-    /* box-sizing: border-box; */
+.cards {
+  width: 200px;
+  height: auto;
+  left: 386px;
+  top: 520px;
+  padding: 16px;
+  border: 2px solid #c4c4c4;
+  border-radius: 8px;
+  background: #fff;
+  margin: 8px;
+  /* box-sizing: border-box; */
 }
-
+/* 
 .buttonsCard {
     display: flex;
     width: 100%;
     position: relative;
     justify-content: space-evenly;
+} */
+
+/* .plus {
+  font-size: 100px;
+  border-radius: 100%;
+  border: 1px solid #999999;
+  width: 50%;
+  height: 50%;
+  text-align: center;
+} */
+
+:link {
+  text-decoration: none;
 }

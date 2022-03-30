@@ -1,4 +1,5 @@
 import { Route, Router, Routes, Link, matchRoutes} from "react-router-dom"
+import { NewPet } from "../components/Forms/newPet"
 import { Category } from "./Category"
 import { Dashboard } from "./Dashboard"
 import { Home } from "./home"
@@ -20,6 +21,7 @@ import { Users } from "./Users"
             <Route path="/:user_id" element={<Dashboard />}></Route>
             <Route path="/:user_id/:pet_id" element={<PetDashboard />}></Route>
             <Route path="/category" element={<Category />}></Route>
+            <Route path="/newpet" element={<NewPet />}></Route>
 
      
         </Routes>

@@ -1,48 +1,57 @@
-import { PetDataCard } from "../../components/PetDataCards"
-import "./style.css"
-import { useParams } from "react-router-dom"
-import myDataBase from "../../database/pets.json"
-
+import "./style.css";
+import { useParams } from "react-router-dom";
+import React, { useState } from "react";
+import API from "../../api";
+import { PetDataCard } from "../../components/PetDataCards";
+import { Category } from "../Category";
+import dataCategory from "../../database/categories.json";
 
 const PetDashboard = () => {
+  const { pet_id } = useParams();
+  const [pet, setPet] = useState<IPet>();
+  const [products, setProducts] = useState<IProduct[]>([]);
 
-    const { user_id, pet_id } = useParams()
-    //Find a user position
-    const userIndex = myDataBase.findIndex(user => user.id === user_id)
-    const userData = myDataBase[userIndex]
-    
-    //Find a pet for the user position already found at userIndex
-    const myUserPetIndex = userData.pets.findIndex(pet => pet.id === pet_id)
-    const myPetData = userData.pets[myUserPetIndex]
+  React.useEffect(() => {
+    API.get(`/pets/${pet_id}`).then((response) => {
+      const axioPets = response.data;
 
-    return (
-        console.log(myPetData),
-        <div className="dashboard">
+      setPet(response.data);
+    });
+  }, []);
 
-            <h1>{myPetData.name} Dashboard</h1>
+  return (
+    <div className="dashboard">
+      <div className="petSumary">
+        <h1>{pet?.name}</h1>
 
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet iusto maiores, dolor iste doloribus ad dolore. Modi quo, commodi hic quibusdam dolorem libero dolores quod ducimus cupiditate, excepturi aut dolor!</p>
+        <ul>
+          <li>Birthdate: {pet?.birthDate} |</li>
+          <li>Gender: {pet?.femaleOrMale} |</li>
+          <li>
+            Weight: {pet?.weight} {pet?.weightUnity}
+          </li>
+        </ul>
 
-            <div>
+        <p>{pet?.description}</p>
+      </div>
 
-                <h2>Medicine</h2>
-
-                <div className="cardsLine">
-
-                    {myPetData.haveMedicines.map(medicine =>
-
-                        <PetDataCard medicineName={medicine.medicineName} typeOfMedicine={medicine.typeOfMedicine} key={medicine.id} petId={medicine.id}></PetDataCard>
-
-                    )}
-
-                </div>
-
+      <div className="dashboardCards">
+        {dataCategory.map((categories) => {
+          return (
+            <div key={categories.type}>
+              <PetDataCard categoryType={categories.type}>
+                <ul>
+                  {categories.allMedicines.map((product: IProduct) => {
+                    return <li key={product.name}>{product.name}</li>;
+                  })}
+                </ul>
+              </PetDataCard>
             </div>
+          );
+        })}
+      </div>
+    </div>
+  );
+};
 
-        </div>
-
-    )
-
-}
-
-export { PetDashboard }
+export { PetDashboard };
