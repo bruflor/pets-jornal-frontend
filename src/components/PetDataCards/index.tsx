@@ -14,7 +14,6 @@ const PetDataCard = ({ petId, medicineName, typeOfMedicine, applicationDate, nam
         // <div id={petId} className={myClass === undefined ? `cards` : `cards  ${myClass}`}>
         // <div id={petId} className="cards">
         <div className="cards">
-            <img></img>
             <h3>{medicineName}</h3>
             <p>{typeOfMedicine} </p>
             <p>{applicationDate}</p>
