@@ -18,4 +18,5 @@ const Cards = ({ name, description, weight, id }: IPet) => {
   );
 };
 
+
 export { Cards };
