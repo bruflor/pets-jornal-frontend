@@ -4,11 +4,6 @@ import "./style.css";
 import API from "../../api";
 import props from "react";
 
-interface Props {
-  categoryType: string;
-  name?: string;
-}
-
 const PetDataCard = (props: Props) => {
   return (
     <div className="cards">

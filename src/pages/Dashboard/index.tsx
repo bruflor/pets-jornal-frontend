@@ -7,17 +7,8 @@ import { useState } from "react";
 import React from "react";
 import API from "../../api";
 
-interface IPets {
-  name: string;
-  description?: string;
-  weight?: number | string;
-  dateOfBirth?: string;
-  id: string;
-  userId?: string;
-}
-
 const Dashboard = () => {
-  const [pets, setPets] = useState<IPets[]>([]); //between <> is the type, that's a Array from my interface. Between the () is a initial value, that's a empty array
+  const [pets, setPets] = useState<IPet[]>([]); //between <> is the type, that's a Array from my interface. Between the () is a initial value, that's a empty array
 
   React.useEffect(() => {
     API.get("/pets/").then((response) => {

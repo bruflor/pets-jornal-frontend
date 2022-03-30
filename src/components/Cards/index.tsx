@@ -1,24 +1,7 @@
 import { Link } from "react-router-dom";
 import "./style.css";
 
-interface IPets {
-  id?: string;
-  name?: string;
-  birthDate?: string;
-  breed?: string;
-  weight?: number | string;
-  weightUnity?: string;
-  imgURL?: string;
-  femaleOrMale?: string;
-  description?: string;
-  haveMedicines?: string;
-  haveVaccines?: string;
-  created_at?: string;
-  owner?: string;
-  label?: string;
-}
-
-const Cards = ({ name, description, weight, id }: IPets) => {
+const Cards = ({ name, description, weight, id }: IPet) => {
   return (
     <div className="cards">
       <img></img>
