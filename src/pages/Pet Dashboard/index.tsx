@@ -9,7 +9,7 @@ import dataCategory from "../../database/categories.json";
 const PetDashboard = () => {
   const { pet_id } = useParams();
   const [pet, setPet] = useState<IPet>();
-  const [products, setProducts] = useState<IPet[]>([]);
+  const [products, setProducts] = useState<IProduct[]>([]);
 
   React.useEffect(() => {
     API.get(`/pets/${pet_id}`).then((response) => {
@@ -23,6 +23,7 @@ const PetDashboard = () => {
     <div className="dashboard">
       <div className="petSumary">
         <h1>{pet?.name}</h1>
+
         <ul>
           <li>Birthdate: {pet?.birthDate} |</li>
           <li>Gender: {pet?.femaleOrMale} |</li>
@@ -30,18 +31,21 @@ const PetDashboard = () => {
             Weight: {pet?.weight} {pet?.weightUnity}
           </li>
         </ul>
+
         <p>{pet?.description}</p>
       </div>
+
       <div className="dashboardCards">
         {dataCategory.map((categories) => {
-          console.log(categories.type);
-          //TODO If type === medicine will map the array of allMedicines and return the medicine name
           return (
-            <div>
-              {products?.map((product) => {
-                console.log(categories.allMedicines[0].name);
-              })}
-              <PetDataCard categoryType={categories.type} />
+            <div key={categories.type}>
+              <PetDataCard categoryType={categories.type}>
+                <ul>
+                  {categories.allMedicines.map((product: IProduct) => {
+                    return <li key={product.name}>{product.name}</li>;
+                  })}
+                </ul>
+              </PetDataCard>
             </div>
           );
         })}

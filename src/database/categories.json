@@ -18,7 +18,12 @@
 
     {
         "type":"Vaccines", 
-        "allMedicines": [{"name":"banana"}]
-    
-    }
+        "allMedicines": [
+            {
+            "name":"banana", 
+            "typeOfMedicine": "Vitamine",
+            "laboratory": "Bauer",
+            "frequency": "Yearly"
+        }
+    ]}
 ]

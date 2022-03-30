@@ -16,12 +16,6 @@ interface IPet {
   label?: string;
 }
 
-//PetDataCard
-interface Props {
-  categoryType: string;
-  name?: string;
-}
-
 //PetDashboard
 interface IDataCategory {
   typeOfMedicineObj: string;
@@ -30,13 +24,13 @@ interface IDataCategory {
 //PetDashboard
 interface IMedicinesGroup {
   type: string;
-  allMedicines: IMedicine[];
+  allMedicines: IProduct[];
 }
 
 //PetDashboard
-interface IMedicine {
+interface IProduct {
   name: string;
-  typeOfMediccine: string;
-  laboratory: string;
-  frequency: string;
+  typeOfMediccine?: string;
+  laboratory?: string;
+  frequency?: string;
 }
