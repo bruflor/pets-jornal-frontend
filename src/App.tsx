@@ -1,26 +1,21 @@
-import { useState } from 'react'
-import { Menu } from './components/menu'
-import { Nav } from './components/Nav'
-import { Category } from './pages/Category'
-import './App.css'
-import { Home } from './pages/home'
-import { AppRoute} from './pages/routes'
+import { useState } from "react";
+import "./App.css";
+import { Menu } from "./components/navegation/menu";
+import { Nav } from "./components/navegation/nav";
+import { AppRoute } from "./routes/router";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
 
   return (
     <div className="App">
-      <Menu></Menu>
+      <Nav></Nav>
       <div className="main">
-        <Nav></Nav>
-
+        <Menu></Menu>
         <AppRoute></AppRoute>
-
       </div>
-
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
