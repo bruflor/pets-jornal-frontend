@@ -2,21 +2,26 @@
 
 .nav{ 
     display: flex;
-    position:relative;
-    margin: 32px;
     justify-content: space-between;
-    background-color: red;    
-    color:$menucolor;
+    height:100px;
+    padding: 16px;
+    padding-left: 32px;    
+    color:black;
     font-family: $titleFont;
     text-decoration: none;
     font-size: 20px;
-}
-.icons-nav p { 
-    margin-right: 16px;
+    border-bottom: 1px solid $lineColor;
+    align-items: center;
+  
+
 }
 
 .icons-nav {
     display: flex;
     justify-content: end;
+    
+    & > p { 
+        margin-right: 16px;
+    }
     
 }

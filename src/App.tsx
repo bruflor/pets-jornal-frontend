@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./Styles/app.css";
+import "./Styles/app.scss";
 import { Menu } from "./components/navegation/menu";
 import { Nav } from "./components/navegation/nav";
 import { AppRoute } from "./routes/router";

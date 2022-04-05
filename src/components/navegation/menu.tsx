@@ -1,18 +1,28 @@
 import React from "react";
-import "../../Styles/navegation/menu.css";
+import "../../Styles/navegation/menu.scss";
+import { MdDashboard } from "react-icons/md";
 
 const Menu = () => {
   return (
     <div className="mainMenu">
-      <section className="logo">
+      <div className="logo">
         <img src="././fakelogo.png"></img>
-      </section>
-      <section className="menu">
-        <h2>Dashboard</h2>
-        <p>My pets</p>
-        <h2>Articles</h2>
-        <h2>Calendar</h2>
-      </section>
+        <p>Pet Journal</p>
+      </div>
+      <ul className="menu">
+        <li>
+          <MdDashboard />
+          <span>Dashboard</span>
+        </li>
+        <li>
+          <MdDashboard />
+          <span>Articles</span>
+        </li>
+        <li>
+          <MdDashboard />
+          <span>Calendar</span>
+        </li>
+      </ul>
     </div>
   );
 };
