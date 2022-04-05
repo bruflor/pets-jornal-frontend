@@ -1,0 +1,12 @@
+@import "./variables.scss";
+
+
+.main {
+    // display: flex;
+    background-color: black;
+}
+
+.app {
+    background-color: $maincolor;
+    height: 100vh;
+}

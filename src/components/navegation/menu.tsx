@@ -1,8 +1,9 @@
 import React from "react";
+import "../../Styles/navegation/menu.css";
 
 const Menu = () => {
   return (
-    <div>
+    <div className="mainMenu">
       <section className="logo">
         <img src="././fakelogo.png"></img>
       </section>

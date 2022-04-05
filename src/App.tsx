@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./App.css";
+import "./Styles/app.css";
 import { Menu } from "./components/navegation/menu";
 import { Nav } from "./components/navegation/nav";
 import { AppRoute } from "./routes/router";
@@ -8,10 +8,10 @@ function App() {
   const [count, setCount] = useState(0);
 
   return (
-    <div className="App">
-      <Nav></Nav>
+    <div className="app">
+      <Menu></Menu>
       <div className="main">
-        <Menu></Menu>
+        <Nav></Nav>
         <AppRoute></AppRoute>
       </div>
     </div>
