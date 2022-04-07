@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { CardPets } from "../components/cards/cardPets";
 import pets from "../database/pets.json";
+import "../Styles/dashboard.scss";
 
 const Dashboard = () => {
   const [mypets, setMyPets] = useState([]);
