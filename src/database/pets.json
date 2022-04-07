@@ -1,130 +1,28 @@
 [
     {
-        "name":"Bruna",
-        "id": "12345",
-        "email":"brn.flor@butia.pt",
-        "password":"12345",
-        "pets":[
-            {
-                "name":"Nala",
-                "id":"54321",
-                "birthDate":"12-05-2012",
-                "breed":"Chow Bull",
-                "weight": 25,
-                "weightUnit":"kg",
-                "imgUrl":"./",
-                "maleOrFemale":"Female",
-                "description":"A melhor cachorra do mundo",
-                "haveMedicines":[
-                    {
-                        "medicineName":"Vermivet",
-                        "id":"99859",
-                        "typeOfMedicine":"Vermifugo",
-                        "applicationDate": "12-02-2021"
-                    },
-                    {
-                        "medicineName":"Estriquinina",
-                        "id":"159952",
-                        "typeOfMedicine":"Vermifugo",
-                        "applicationDate": "12-02-2021"
-                    }
-
-                ], 
-                "haveVaccines":{}
-            },
-            {
-                "name":"Kiara",
-                "id":"54322",
-                "birthDate":"20-09-2021",
-                "breed":"Labradora",
-                "weight": 15,
-                "weightUnit":"kg",
-                "imgUrl":"./",
-                "maleOrFemale":"Female",
-                "description":"Ainda não sei, mas já amo",
-                "haveMedicines": [
-                    {
-                        "medicineName":"Vermivet",
-                        "id":"99859",
-                        "typeOfMedicine":"Vermifugo",
-                        "applicationDate": "12-02-2021"
-                    },
-                    {
-                        "medicineName":"Estriquinina",
-                        "id":"159952",
-                        "typeOfMedicine":"Vermifugo",
-                        "applicationDate": "12-02-2021"
-                    }
-
-                ], 
-                                "haveVaccines":{}
-            }
-        ]
-
-
+        "id": "12e59df3-f16a-4abc-a6c2-906cc4be7176",
+        "name": "Pepa",
+        "birthDate": "12-05-2012",
+        "breed": "pepa",
+        "weight": 23.0,
+        "weightUnity": "kg",
+        "imgURL": "asd",
+        "femaleOrMale": "female",
+        "description": "desc",
+        "created_at": "2022-04-03",
+        "owner": "wes@wes.com"
     },
     {
-        "name":"Wes",
-        "id": "12346",
-        "email":"brn.flor@butia.pt",
-        "password":"12345",
-        "pets":[
-            {
-                "name":"Pepa",
-                "id":"54321",
-                "birthDate":"12-05-2012",
-                "breed":"Chow Bull",
-                "weight": 25,
-                "weightUnit":"kg",
-                "imgUrl":"./",
-                "maleOrFemale":"Female",
-                "description":"A melhor cachorra do mundo",
-                "haveMedicines": [
-                    {
-                        "medicineName":"Vermivet",
-                        "id":"99859",
-                        "typeOfMedicine":"Vermifugo",
-                        "applicationDate": "12-02-2021"
-                    },
-                    {
-                        "medicineName":"Estriquinina",
-                        "id":"159952",
-                        "typeOfMedicine":"Vermifugo",
-                        "applicationDate": "12-02-2021"
-                    }
-
-                ], 
-                "haveVaccines":{}
-            },
-            {
-                "name":"Kovu",
-                "id":"54322",
-                "birthDate":"20-09-2021",
-                "breed":"Labradora",
-                "weight": 15,
-                "weightUnit":"kg",
-                "imgUrl":"./",
-                "maleOrFemale":"Female",
-                "description":"Ainda não sei, mas já amo",
-                "haveMedicines": [
-                    {
-                        "medicineName":"Vermivet",
-                        "id":"99859",
-                        "typeOfMedicine":"Vermifugo",
-                        "applicationDate": "12-02-2021"
-                    },
-                    {
-                        "medicineName":"Estriquinina",
-                        "id":"159952",
-                        "typeOfMedicine":"Vermifugo",
-                        "applicationDate": "12-02-2021"
-                    }
-
-                ], 
-                "haveVaccines":{}
-            }
-        ]
-
-
+        "id": "a2b88cb8-1ab2-471f-99ec-016933fea16e",
+        "name": "Beto",
+        "birthDate": "03-03-2003",
+        "breed": "humano",
+        "weight": 90.0,
+        "weightUnity": "kg",
+        "imgURL": "none",
+        "femaleOrMale": "male",
+        "description": "desc",
+        "created_at": "2022-04-03",
+        "owner": "wes@wes.com"
     }
 ]

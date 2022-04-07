@@ -15,7 +15,7 @@ const Login = () => {
   });
   return (
     <div>
-      <Link to="64de88d0-9b52-41c9-bfec-997170bc9ac7">Logado</Link>
+      <Link to="4714bc98-7044-451b-84bc-381a1613fc71">Logado</Link>
     </div>
   );
 };
