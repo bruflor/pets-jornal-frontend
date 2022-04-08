@@ -57,8 +57,23 @@
             width: 30px;
             height: 30px;
             border-radius: 100%;
-            border: 1px solid $buttonColor
-    }
-            
+            border: 1px solid $buttonColor;
+            &:hover{
+                cursor:pointer;
+            }
         }
+        
+    }
+}
+
+.plus {
+    color: $buttonColor;
+    width: 100%;
+    height: 100%;
+    font-size: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
 }

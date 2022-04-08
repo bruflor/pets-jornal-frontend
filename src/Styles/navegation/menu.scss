@@ -21,20 +21,33 @@
 .menu {
     font-family: $bodyFont;
     font-weight: 600;
-
+    transition-duration: 150ms;
+    
+    
     &>li {
         padding: 16px 32px;
         display: flex;
         align-items: center;
-
+        
         &:hover {
             color: $buttonColor;
             cursor: pointer;
+            transition-duration: 600ms;
+            transform: translateX(8px) ;
+            
+            
         }
-
+        
         &>span {
             margin-left: 8px;
         }
-
+        
+    }
+    .currentPage {
+        color:$buttonColor;
+        border-right: 4px solid $buttonColor;
+        &:hover{
+            transform: none;
+        }
     }
 }

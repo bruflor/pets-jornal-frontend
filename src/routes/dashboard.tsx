@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { CardPets } from "../components/cards/cardPets";
+import { NewPet } from "../components/newPet";
 import pets from "../database/pets.json";
 import "../Styles/dashboard.scss";
 
@@ -14,6 +15,7 @@ const Dashboard = () => {
         {pets.map((mypets) => {
           return <CardPets name={mypets.name} birthDate={mypets.birthDate} />;
         })}
+        <NewPet />
       </div>
     </div>
   );

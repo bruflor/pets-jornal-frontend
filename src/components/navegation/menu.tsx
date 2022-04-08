@@ -10,7 +10,7 @@ const Menu = () => {
         <p>Pet Journal</p>
       </div>
       <ul className="menu">
-        <li>
+        <li className="currentPage">
           <MdDashboard />
           <span>Dashboard</span>
         </li>
