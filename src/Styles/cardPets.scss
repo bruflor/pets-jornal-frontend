@@ -12,9 +12,7 @@
     color: $textColor;
     transition-duration: 150ms;
 
-    &+&{
-        margin-left: 16px;
-    }
+
 
     &:hover{
         box-shadow: 0px 0px 32px #ddd;
@@ -60,6 +58,8 @@
             border: 1px solid $buttonColor;
             &:hover{
                 cursor:pointer;
+                background: $buttonColor;
+                color: white;
             }
         }
         
@@ -67,9 +67,14 @@
 }
 
 .plus {
+    box-shadow: 0px 0px 10px $lineColor;
+    border-radius: 10px;
+    height: 180px;
+    width: 326px;
+    margin-top: 16px;
+    padding: 16px;
+
     color: $buttonColor;
-    width: 100%;
-    height: 100%;
     font-size: 32px;
     display: flex;
     justify-content: center;

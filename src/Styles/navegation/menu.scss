@@ -48,6 +48,7 @@
         border-right: 4px solid $buttonColor;
         &:hover{
             transform: none;
+            cursor: default;
         }
     }
 }

@@ -5,8 +5,8 @@ import { AiOutlinePlusCircle } from "react-icons/ai";
 
 const NewPet = () => {
   return (
-    <div className="cards">
-      <Link to="" className="plus">
+    <div className="plus">
+      <Link to="/addPet">
         <AiOutlinePlusCircle />
       </Link>
     </div>
