@@ -1,5 +1,6 @@
 import { useField } from "@unform/core";
 import React, { useEffect, useRef } from "react";
+import "./forms.scss";
 
 interface IInput {
   name: string;
@@ -21,7 +22,7 @@ const InputText = ({ name, label, type }: IInput) => {
   }, [fieldName, registerField]);
 
   return (
-    <p>
+    <p className="fullInput">
       <label>{label}</label>
       <br />
       <input ref={inputRef} name={name} type={type} />
