@@ -3,6 +3,7 @@ import { FormHandles, SubmitHandler, useField } from "@unform/core";
 import { Form } from "@unform/web";
 import { InputText } from "./inputText";
 import "./forms.scss";
+import { InputSelect } from "./inputSelect";
 
 interface IForm {
   data: string;
@@ -13,6 +14,10 @@ const AddNewPet = () => {
   const handleFormSubmit: SubmitHandler<IForm> = (data) => {
     console.log(data);
   };
+  const selectGenders = [
+    { value: "Female", label: "Female" },
+    { value: "Male", label: "Male" },
+  ];
   return (
     <div className="containerForm">
       <h2>Add a Pet</h2>
@@ -22,8 +27,18 @@ const AddNewPet = () => {
         <InputText label="Birthdate" name="birthDate" />
         <InputText label="Breed" name="breed" />
         <InputText label="Weight" name="weight" />
-        <InputText label="Unity" name="weightUnity" />
-        <InputText label="Gender" name="femaleOrMale" />
+        {/* <InputSelect label="Unity" name="weightUnity" /> */}
+        <InputSelect label="Gender" name="femaleOrMale">
+          <>
+            {selectGenders.map((gender) => {
+              return (
+                <option key={gender.value} value={gender.value}>
+                  {gender.label}
+                </option>
+              );
+            })}
+          </>
+        </InputSelect>
         <InputText label="Description" name="description" />
 
         <button type="submit">Save</button>

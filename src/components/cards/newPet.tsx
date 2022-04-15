@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "../Styles/cardPets.scss";
+import "./cardPets.scss";
 import { AiOutlinePlusCircle } from "react-icons/ai";
 
 const NewPet = () => {

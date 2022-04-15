@@ -23,7 +23,7 @@ const InputText = ({ name, label, type }: IInput) => {
 
   return (
     <p className="fullInput">
-      <label>{label}</label>
+      <label htmlFor={fieldName}>{label}</label>
       <input ref={inputRef} name={name} type={type} />
     </p>
   );

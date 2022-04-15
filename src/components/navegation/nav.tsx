@@ -1,5 +1,5 @@
 import React from "react";
-import "../../Styles/navegation/navbar.scss";
+import "./navbar.scss";
 import { FaRegUserCircle, FaRegBell } from "react-icons/fa";
 import { BiHelpCircle } from "react-icons/bi";
 

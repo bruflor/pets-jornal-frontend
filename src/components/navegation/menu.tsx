@@ -1,5 +1,5 @@
 import React from "react";
-import "../../Styles/navegation/menu.scss";
+import "./menu.scss";
 import { MdDashboard } from "react-icons/md";
 
 const Menu = () => {

@@ -1,5 +1,5 @@
 import React from "react";
-import "../../Styles/cardPets.scss";
+import "./cardPets.scss";
 import { GiLoveInjection, GiMedicines, GiDogBowl } from "react-icons/gi";
 import IpetsCard from "../../interfaces/interfaces";
 
