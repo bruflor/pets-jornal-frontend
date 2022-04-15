@@ -24,7 +24,6 @@ const InputText = ({ name, label, type }: IInput) => {
   return (
     <p className="fullInput">
       <label>{label}</label>
-      <br />
       <input ref={inputRef} name={name} type={type} />
     </p>
   );
