@@ -22,10 +22,10 @@ const InputText = ({ name, label, type }: IInput) => {
   }, [fieldName, registerField]);
 
   return (
-    <p className="fullInput">
+    <div className="fullInput">
       <label htmlFor={fieldName}>{label}</label>
       <input ref={inputRef} name={name} type={type} />
-    </p>
+    </div>
   );
 };
 

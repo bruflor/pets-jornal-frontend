@@ -32,7 +32,7 @@ const InputSelect = ({ name, label, type, children }: IInput) => {
   }, [fieldName, registerField]);
 
   return (
-    <div>
+    <div className="fullInput">
       <label htmlFor={fieldName}>{label}</label>
 
       <select

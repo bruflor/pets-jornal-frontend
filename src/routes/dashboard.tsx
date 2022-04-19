@@ -13,7 +13,13 @@ const Dashboard = () => {
       </div>
       <div className="cardsCarousel">
         {pets.map((mypets) => {
-          return <CardPets name={mypets.name} birthDate={mypets.birthDate} />;
+          return (
+            <CardPets
+              key={mypets.id}
+              name={mypets.name}
+              birthDate={mypets.birthDate}
+            />
+          );
         })}
         <NewPet />
       </div>
