@@ -4,6 +4,7 @@ import { AddNewPet } from "../components/forms/addNewPet";
 import { Dashboard } from "./dashboard";
 
 import { Login } from "./login";
+import { PetDashboard } from "./petDashboard";
 
 function AppRoute() {
   return (
@@ -11,6 +12,7 @@ function AppRoute() {
       <Route path="/" element={<Login />} />
       <Route path="/:user" element={<Dashboard />} />
       <Route path="/addPet" element={<AddNewPet />} />
+      <Route path="/petDashboard" element={<PetDashboard />} />
     </Routes>
   );
 }

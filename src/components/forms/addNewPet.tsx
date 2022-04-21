@@ -60,7 +60,11 @@ const AddNewPet = () => {
         </InputSelect>
         <InputText label="Description" name="description" />
 
-        <button className="cancelButton" onClick={() => navigate(-1)}>
+        <button
+          className="cancelButton"
+          id="cancelButton"
+          onClick={() => navigate(-1)}
+        >
           Cancel
         </button>
         <button className="normalButton" type="submit">

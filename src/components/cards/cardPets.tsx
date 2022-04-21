@@ -2,6 +2,7 @@ import React from "react";
 import "./cardPets.scss";
 import { GiLoveInjection, GiMedicines, GiDogBowl } from "react-icons/gi";
 import IpetsCard from "../../interfaces/interfaces";
+import { Link } from "react-router-dom";
 
 const CardPets = ({ name, birthDate }: IpetsCard) => {
   return (
@@ -16,10 +17,14 @@ const CardPets = ({ name, birthDate }: IpetsCard) => {
       <div className="buttons">
         <ul>
           <li>
-            <GiMedicines />
+            <a href="/petDashboard#medContainer" className="iconButtons">
+              <GiMedicines />
+            </a>
           </li>
           <li>
-            <GiLoveInjection />
+            <a href="/petDashboard#vacContainer" className="iconButtons">
+              <GiLoveInjection />
+            </a>
           </li>
           <li>
             <GiDogBowl />
