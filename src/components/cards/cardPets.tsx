@@ -27,7 +27,9 @@ const CardPets = ({ name, birthDate }: IpetsCard) => {
             </a>
           </li>
           <li>
-            <GiDogBowl />
+            <a href="/petDashboard#vacContainer" className="iconButtons">
+              <GiDogBowl />
+            </a>
           </li>
         </ul>
       </div>
