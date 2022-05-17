@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./cardPets.scss";
 import { GiLoveInjection, GiMedicines, GiDogBowl } from "react-icons/gi";
 import IpetsCard from "../../interfaces/interfaces";
@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 const CardPets = ({ name, birthDate }: IpetsCard) => {
   return (
-    <div className="cards">
+    <a href="/petDashboard" className="cards">
       <div className="mainData">
         <img src="././fakelogo.png" />
         <div>
@@ -17,23 +17,17 @@ const CardPets = ({ name, birthDate }: IpetsCard) => {
       <div className="buttons">
         <ul>
           <li>
-            <a href="/petDashboard#medContainer" className="iconButtons">
-              <GiMedicines />
-            </a>
+            <GiMedicines />
           </li>
           <li>
-            <a href="/petDashboard#vacContainer" className="iconButtons">
-              <GiLoveInjection />
-            </a>
+            <GiLoveInjection />
           </li>
           <li>
-            <a href="/petDashboard#vacContainer" className="iconButtons">
-              <GiDogBowl />
-            </a>
+            <GiDogBowl />
           </li>
         </ul>
       </div>
-    </div>
+    </a>
   );
 };
 

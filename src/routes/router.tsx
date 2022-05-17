@@ -12,7 +12,10 @@ function AppRoute() {
       <Route path="/" element={<Login />} />
       <Route path="/:user" element={<Dashboard />} />
       <Route path="/addPet" element={<AddNewPet />} />
-      <Route path="/petDashboard" element={<PetDashboard />} />
+      <Route
+        path="/petDashboard"
+        element={<PetDashboard name={""} birthDate={""} />}
+      />
     </Routes>
   );
 }

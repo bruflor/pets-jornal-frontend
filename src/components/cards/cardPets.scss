@@ -11,6 +11,7 @@
     padding: 16px;
     color: $textColor;
     transition-duration: 150ms;
+    text-decoration: none;
 
 
 
@@ -39,6 +40,11 @@
         color:$textColor
     }
 }
+.contentPet{
+    border-bottom: 1px solid #eee;
+    padding-bottom: 16px;
+    padding-top: 16px;
+}
 
 .buttons {
     align-items: bottom;
@@ -47,6 +53,15 @@
         display: flex;
         justify-content: flex-end;
         &>li {
+            color:$buttonColor;
+            line-height: 30px;       
+            margin: 8px;
+            width: 30px;
+            height: 30px;
+            border-radius: 100%;
+            border: 1px solid $buttonColor;
+            display:block;
+            color:$buttonColor;
             text-align: center;     
             list-style: none;
             // color:$buttonColor;
@@ -64,22 +79,7 @@
             }
         }        
     }
-// }
-.iconButtons{
-    color:$buttonColor;
-    line-height: 30px;       
-    margin: 8px;
-    width: 30px;
-    height: 30px;
-    border-radius: 100%;
-    border: 1px solid $buttonColor;
-    display:block;
-    color:$buttonColor;
-    &:hover{
-        color:white;
-        background: $buttonColor;
-    }
-}
+
 
 
 .plus {
