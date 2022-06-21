@@ -1,0 +1,55 @@
+@import "../../Styles/variables.scss";
+
+.mainMenu {
+    width: 300px;
+
+}
+
+.logo {
+    background-color: $shadeColor;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &>img {
+        max-width: 100px;
+    }
+}
+
+.menu {
+    font-family: $bodyFont;
+    font-weight: 600;
+    transition-duration: 150ms;
+    
+    
+    &>li {
+        padding: 16px 32px;
+        display: flex;
+        align-items: center;
+        transition-duration: 300ms;
+        
+        &:hover {
+            color: $buttonColor;
+            cursor: pointer;
+            transition-duration: 600ms;
+            transform: translateX(8px) ;
+            
+            
+        }
+        
+        &>span {
+            margin-left: 8px;
+        }
+        
+    }
+    .currentPage {
+        color:$buttonColor;
+        border-right: 4px solid $buttonColor;
+        &:hover{
+            transform: none;
+            cursor: default;
+        }
+    }
+}

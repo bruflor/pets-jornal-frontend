@@ -1,0 +1,34 @@
+@import "../../Styles/variables.scss";
+.nav{ 
+    display: flex;
+    justify-content: space-between;
+    height:100px;
+    padding: 16px;
+    padding-left: 32px;    
+    color:black;
+    font-family: $titleFont;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 600;
+    border-bottom: 1px solid $lineColor;
+    align-items: center;
+  
+
+}
+
+.icons-nav {
+    display: flex;
+    justify-content: end;
+    
+    & > p { 
+        margin-right: 16px;
+        &:hover{
+            transition-duration: 600ms;
+            color: $buttonColor;
+            cursor: pointer;
+            font-weight: 800;
+
+         }
+    }
+    
+}

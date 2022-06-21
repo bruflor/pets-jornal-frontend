@@ -1,0 +1,18 @@
+.petBasicInfo {
+    display: flex;
+    // border-bottom: 1px solid #eee;
+    padding-right: 46px;
+    padding-bottom: 16px;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 16px;
+    
+    &>img {
+        max-width: 150px;
+        border-radius: 100%;
+        background-color: white;
+        padding: 5px;
+        margin-right: 24px;
+        // color:$textColor
+    }
+}

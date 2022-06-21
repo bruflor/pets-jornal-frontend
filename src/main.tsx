@@ -1,15 +1,18 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
-import './index.css'
-import App from './App'
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import { Category } from './pages/Category'
-import { Dashboard } from './pages/Dashboard'
-import { appRoute } from './pages/routes'
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import App from "./App";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Login } from "./routes/login";
 
 ReactDOM.render(
   <BrowserRouter>
-   <App />
-   </BrowserRouter>,
-  document.getElementById('root')
-)
+    {/* {if (<Login /> !== undefined) {
+    return (
+      <App />
+    ) }
+    Else { return (<Login />)}} */}
+    <App />
+  </BrowserRouter>,
+  document.getElementById("root")
+);
